@@ -1,6 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace LekcjeWindowsForms
 {
@@ -34,12 +42,11 @@ namespace LekcjeWindowsForms
             dgvDiary.Columns[7].HeaderText = "Język polski";
             dgvDiary.Columns[8].HeaderText = "Język obcy";
         }
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var addEditStudent = new AddEditStudent();
             addEditStudent.ShowDialog();
-
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -57,7 +64,7 @@ namespace LekcjeWindowsForms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvDiary.SelectedRows.Count == 0)
+            if(dgvDiary.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Proszę zaznacz ucznia, którego dane chcesz edytopać");
                 return;

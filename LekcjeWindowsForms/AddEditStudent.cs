@@ -1,8 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace LekcjeWindowsForms
 {
@@ -17,6 +23,7 @@ namespace LekcjeWindowsForms
             InitializeComponent();
 
             _studentId = id;
+
             GetStudentData();
         }
 
@@ -30,10 +37,11 @@ namespace LekcjeWindowsForms
                 _student = students.FirstOrDefault(x => x.Id == _studentId);
 
                 if (_student == null)
-                    throw new Exception("Brak uzytkownika o padanym ID");                               
+                    throw new Exception("Brak uzytkownika o padanym ID");
+
+                FillTextBoxes();
             }
             tbName.Select();
-            FillTextBoxes();
         }
 
         private void FillTextBoxes()
