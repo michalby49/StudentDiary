@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace LekcjeWindowsForms
+namespace StudentDiary
 {
     class FileHelper<T> where T : new()
     {

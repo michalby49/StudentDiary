@@ -1,5 +1,5 @@
 ﻿
-namespace LekcjeWindowsForms
+namespace StudentDiary
 {
     partial class Main
     {
@@ -40,6 +40,7 @@ namespace LekcjeWindowsForms
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvDiary = new System.Windows.Forms.DataGridView();
+            this.cbbClassFinder = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).BeginInit();
             this.SuspendLayout();
@@ -135,14 +136,23 @@ namespace LekcjeWindowsForms
             this.dgvDiary.Name = "dgvDiary";
             this.dgvDiary.RowHeadersVisible = false;
             this.dgvDiary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDiary.Size = new System.Drawing.Size(934, 401);
+            this.dgvDiary.Size = new System.Drawing.Size(746, 401);
             this.dgvDiary.TabIndex = 9;
+            // 
+            // cbbClassFinder
+            // 
+            this.cbbClassFinder.FormattingEnabled = true;
+            this.cbbClassFinder.Location = new System.Drawing.Point(337, 13);
+            this.cbbClassFinder.Name = "cbbClassFinder";
+            this.cbbClassFinder.Size = new System.Drawing.Size(121, 21);
+            this.cbbClassFinder.TabIndex = 10;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 454);
+            this.ClientSize = new System.Drawing.Size(767, 454);
+            this.Controls.Add(this.cbbClassFinder);
             this.Controls.Add(this.dgvDiary);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);
@@ -150,6 +160,7 @@ namespace LekcjeWindowsForms
             this.Controls.Add(this.btnAdd);
             this.Name = "Main";
             this.Text = "Dziennik";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).EndInit();
             this.ResumeLayout(false);
@@ -167,6 +178,7 @@ namespace LekcjeWindowsForms
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvDiary;
+        private System.Windows.Forms.ComboBox cbbClassFinder;
     }
 }
 

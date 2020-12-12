@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace LekcjeWindowsForms.Properties
+namespace StudentDiary.Properties
 {
     /// <summary>
     ///   Silnie typizowana klasa zasobów do wyszukiwania zlokalizowanych ciągów itd.

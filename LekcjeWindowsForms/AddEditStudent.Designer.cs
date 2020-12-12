@@ -1,5 +1,5 @@
 ﻿
-namespace LekcjeWindowsForms
+namespace StudentDiary
 {
     partial class AddEditStudent
     {
@@ -49,11 +49,15 @@ namespace LekcjeWindowsForms
             this.label8 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.ckbActivieties = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbbClass = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(92, 17);
+            this.tbID.Location = new System.Drawing.Point(132, 18);
             this.tbID.Name = "tbID";
             this.tbID.ReadOnly = true;
             this.tbID.Size = new System.Drawing.Size(172, 20);
@@ -79,7 +83,7 @@ namespace LekcjeWindowsForms
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(92, 43);
+            this.tbName.Location = new System.Drawing.Point(132, 44);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(172, 20);
             this.tbName.TabIndex = 2;
@@ -95,7 +99,7 @@ namespace LekcjeWindowsForms
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(92, 69);
+            this.tbLastName.Location = new System.Drawing.Point(132, 70);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(172, 20);
             this.tbLastName.TabIndex = 4;
@@ -111,7 +115,7 @@ namespace LekcjeWindowsForms
             // 
             // tbMath
             // 
-            this.tbMath.Location = new System.Drawing.Point(92, 95);
+            this.tbMath.Location = new System.Drawing.Point(132, 96);
             this.tbMath.Name = "tbMath";
             this.tbMath.Size = new System.Drawing.Size(172, 20);
             this.tbMath.TabIndex = 6;
@@ -127,7 +131,7 @@ namespace LekcjeWindowsForms
             // 
             // tbTechnology
             // 
-            this.tbTechnology.Location = new System.Drawing.Point(92, 121);
+            this.tbTechnology.Location = new System.Drawing.Point(132, 122);
             this.tbTechnology.Name = "tbTechnology";
             this.tbTechnology.Size = new System.Drawing.Size(172, 20);
             this.tbTechnology.TabIndex = 8;
@@ -143,7 +147,7 @@ namespace LekcjeWindowsForms
             // 
             // tbPhysice
             // 
-            this.tbPhysice.Location = new System.Drawing.Point(92, 147);
+            this.tbPhysice.Location = new System.Drawing.Point(132, 148);
             this.tbPhysice.Name = "tbPhysice";
             this.tbPhysice.Size = new System.Drawing.Size(172, 20);
             this.tbPhysice.TabIndex = 10;
@@ -159,7 +163,7 @@ namespace LekcjeWindowsForms
             // 
             // tbPolishLang
             // 
-            this.tbPolishLang.Location = new System.Drawing.Point(92, 173);
+            this.tbPolishLang.Location = new System.Drawing.Point(132, 174);
             this.tbPolishLang.Name = "tbPolishLang";
             this.tbPolishLang.Size = new System.Drawing.Size(172, 20);
             this.tbPolishLang.TabIndex = 12;
@@ -175,14 +179,14 @@ namespace LekcjeWindowsForms
             // 
             // tbEnglishlang
             // 
-            this.tbEnglishlang.Location = new System.Drawing.Point(92, 199);
+            this.tbEnglishlang.Location = new System.Drawing.Point(132, 200);
             this.tbEnglishlang.Name = "tbEnglishlang";
             this.tbEnglishlang.Size = new System.Drawing.Size(172, 20);
             this.tbEnglishlang.TabIndex = 14;
             // 
             // rtbCommends
             // 
-            this.rtbCommends.Location = new System.Drawing.Point(92, 225);
+            this.rtbCommends.Location = new System.Drawing.Point(132, 277);
             this.rtbCommends.Name = "rtbCommends";
             this.rtbCommends.Size = new System.Drawing.Size(172, 100);
             this.rtbCommends.TabIndex = 16;
@@ -191,7 +195,7 @@ namespace LekcjeWindowsForms
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 228);
+            this.label8.Location = new System.Drawing.Point(20, 279);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 17;
@@ -199,7 +203,7 @@ namespace LekcjeWindowsForms
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(189, 331);
+            this.btnConfirm.Location = new System.Drawing.Point(229, 384);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 18;
@@ -209,7 +213,7 @@ namespace LekcjeWindowsForms
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(92, 331);
+            this.btnCancel.Location = new System.Drawing.Point(132, 384);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 19;
@@ -217,10 +221,49 @@ namespace LekcjeWindowsForms
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // ckbActivieties
+            // 
+            this.ckbActivieties.AutoSize = true;
+            this.ckbActivieties.Location = new System.Drawing.Point(132, 227);
+            this.ckbActivieties.Name = "ckbActivieties";
+            this.ckbActivieties.Size = new System.Drawing.Size(15, 14);
+            this.ckbActivieties.TabIndex = 20;
+            this.ckbActivieties.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 227);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Zajęcia dodatkowe";
+            // 
+            // cbbClass
+            // 
+            this.cbbClass.FormattingEnabled = true;
+            this.cbbClass.Location = new System.Drawing.Point(132, 250);
+            this.cbbClass.Name = "cbbClass";
+            this.cbbClass.Size = new System.Drawing.Size(121, 21);
+            this.cbbClass.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(20, 253);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Klasa";
+            // 
             // AddEditStudent
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(292, 374);
+            this.ClientSize = new System.Drawing.Size(314, 417);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.cbbClass);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.ckbActivieties);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label8);
@@ -242,9 +285,7 @@ namespace LekcjeWindowsForms
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.tbID);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(308, 413);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(308, 413);
             this.Name = "AddEditStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodawanie ucznia";
@@ -275,5 +316,9 @@ namespace LekcjeWindowsForms
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.CheckBox ckbActivieties;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbbClass;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -10,11 +10,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace LekcjeWindowsForms
+namespace StudentDiary
 {
     public partial class AddEditStudent : Form 
     {
         private FileHelper<List<Student>> fileHelper = new FileHelper<List<Student>>(Program.FilePath);
+
         private int _studentId;
         private Student _student;
 
@@ -25,6 +26,16 @@ namespace LekcjeWindowsForms
             _studentId = id;
 
             GetStudentData();
+
+            SelectClass(Program.AllClasses);
+        }
+
+        private void SelectClass(List<string> allClasses)
+        {
+            foreach (var item in allClasses)
+            {
+                cbbClass.Items.Add(item.ToString());
+            }
         }
 
         private void GetStudentData()
@@ -55,6 +66,8 @@ namespace LekcjeWindowsForms
             tbEnglishlang.Text = _student.EnglishLang.ToString();
             tbMath.Text = _student.Math.ToString();
             tbTechnology.Text = _student.Technology.ToString();
+            ckbActivieties.Checked = _student.Activities;
+            cbbClass.SelectedItem = _student.Class;
         }
         
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -69,7 +82,7 @@ namespace LekcjeWindowsForms
             AddNewUserToList(students);
                               
             fileHelper.SerializeToFile(students);
-        
+
             Close();
         }
 
@@ -85,7 +98,9 @@ namespace LekcjeWindowsForms
                 Physics = tbPhysice.Text,
                 Technology = tbTechnology.Text,
                 PolishLang = tbPolishLang.Text,
-                EnglishLang = tbEnglishlang.Text
+                EnglishLang = tbEnglishlang.Text,
+                Activities = ckbActivieties.Checked,
+                Class = cbbClass.Text
             };
 
             students.Add(student);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LekcjeWindowsForms
+namespace StudentDiary
 {
     public class Student
     {
@@ -17,6 +17,7 @@ namespace LekcjeWindowsForms
         public string Physics { get; set; }
         public string PolishLang { get; set; }
         public string EnglishLang { get; set; }
-
+        public bool Activities { get; set; }
+        public string Class { get; set; }
     }
 }
