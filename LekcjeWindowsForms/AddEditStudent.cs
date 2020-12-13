@@ -61,7 +61,7 @@ namespace StudentDiary
             tbMath.Text = _student.Math.ToString();
             tbTechnology.Text = _student.Technology.ToString();
             ckbActivieties.Checked = _student.Activities;
-            cbbClass.SelectedItem = _student.Class;
+            
         }
         
         private void btnConfirm_Click(object sender, EventArgs e)

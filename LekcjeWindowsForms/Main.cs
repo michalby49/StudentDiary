@@ -21,8 +21,6 @@ namespace StudentDiary
             {
                 Settings.Default.IsMaximize = value;
             }
-
-
         }
         public Main()
         {
@@ -89,7 +87,7 @@ namespace StudentDiary
         {
             if (dgvDiary.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Proszę zaznacz ucznia, którego dane chcesz edytopać");
+                MessageBox.Show("Proszę zaznacz ucznia, którego dane chcesz edytować");
                 return;
             }
             var addEditStudent = new AddEditStudent(
@@ -105,7 +103,7 @@ namespace StudentDiary
         {
             if(dgvDiary.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Proszę zaznacz ucznia, którego dane chcesz edytopać");
+                MessageBox.Show("Proszę zaznacz ucznia, którego dane chcesz usunąć");
                 return;
             }
 
